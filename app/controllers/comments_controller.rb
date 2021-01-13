@@ -23,12 +23,3 @@ class CommentsController < ApplicationController
         params.require(:comment).permit(:text).merge(user_id: current_user.id, prototype_id: params[:prototype_id])
     end
 end
-
-
-    # @comment = Comment.new(comment_params)
-    # if @comment.save
-    #     redirect_to prototype_comment_path
-    # else
-    #     @comments = @prototype.comments.includes(:user)
-    #     render :new
-    # end
